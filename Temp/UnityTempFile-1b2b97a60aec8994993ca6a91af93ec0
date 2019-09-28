@@ -1,11 +1,13 @@
 /target:library
 /nowarn:0169
-/out:Temp/Assembly-CSharp.dll
+/out:Temp/Unity.TextMeshPro.dll
 /debug:portable
 /optimize-
 /nostdlib+
 /preferreduilang:en-US
 /langversion:latest
+/reference:Library/ScriptAssemblies/UnityEditor.UI.dll
+/reference:Library/ScriptAssemblies/UnityEngine.UI.dll
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -67,15 +69,10 @@
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEditor.dll"
-/reference:Library/ScriptAssemblies/Unity.Timeline.Editor.dll
-/reference:Library/ScriptAssemblies/Unity.VSCode.Editor.dll
-/reference:Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
-/reference:Library/ScriptAssemblies/UnityEngine.UI.dll
-/reference:Library/ScriptAssemblies/Unity.Timeline.dll
-/reference:Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
-/reference:Library/ScriptAssemblies/Unity.Rider.Editor.dll
-/reference:Library/ScriptAssemblies/Unity.TextMeshPro.dll
-/reference:Library/ScriptAssemblies/UnityEditor.UI.dll
+/reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
+/reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
+/reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
+/reference:"C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll"
@@ -283,4 +280,59 @@
 /define:ENABLE_TIMELINE
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-Assets\Dennis\InputController.cs
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\AssemblyInfo.cs.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\FastAction.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\MaterialReferenceManager.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TextContainer.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TextMeshPro.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TextMeshProUGUI.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Asset.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Character.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_CharacterInfo.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ColorGradient.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_CoroutineTween.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_DefaultControls.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Dropdown.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_EditorResourceManager.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontAsset.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontAssetCommon.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontAssetUtilities.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontFeaturesCommon.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontFeatureTable.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_InputField.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_InputValidator.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_LineInfo.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ListPool.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_MaterialManager.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_MeshInfo.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ObjectPool.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_PackageResourceImporter.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_RichTextTagsCommon.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_RichTextTagStack.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ScrollbarEventHandler.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SelectionCaret.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Settings.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ShaderUtilities.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Sprite.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteAnimator.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteAsset.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteAssetImportFormats.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteCharacter.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteGlyph.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Style.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_StyleSheet.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SubMesh.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SubMeshUI.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Text.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextElement.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextElement_Legacy.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextInfo.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextParsingUtilities.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextUtilities.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_UpdateManager.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_UpdateRegistery.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_EventManager.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_ExtensionMethods.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_MeshUtilities.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_Private.cs"
+"D:\HKU bestanden\Jaar 2\Sound, games & interaction\A night at the bar\A night at the bar\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_UGUI_Private.cs"

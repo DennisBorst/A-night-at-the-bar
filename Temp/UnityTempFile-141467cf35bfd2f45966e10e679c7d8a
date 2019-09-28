@@ -1,11 +1,13 @@
 /target:library
 /nowarn:0169
-/out:Temp/Assembly-CSharp.dll
+/out:Temp/Unity.Timeline.dll
 /debug:portable
 /optimize-
 /nostdlib+
 /preferreduilang:en-US
 /langversion:latest
+/reference:Library/ScriptAssemblies/UnityEditor.UI.dll
+/reference:Library/ScriptAssemblies/UnityEngine.UI.dll
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -67,15 +69,10 @@
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEditor.dll"
-/reference:Library/ScriptAssemblies/Unity.Timeline.Editor.dll
-/reference:Library/ScriptAssemblies/Unity.VSCode.Editor.dll
-/reference:Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
-/reference:Library/ScriptAssemblies/UnityEngine.UI.dll
-/reference:Library/ScriptAssemblies/Unity.Timeline.dll
-/reference:Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
-/reference:Library/ScriptAssemblies/Unity.Rider.Editor.dll
-/reference:Library/ScriptAssemblies/Unity.TextMeshPro.dll
-/reference:Library/ScriptAssemblies/UnityEditor.UI.dll
+/reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
+/reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
+/reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
+/reference:"C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll"
 /reference:"D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll"
@@ -283,4 +280,69 @@
 /define:ENABLE_TIMELINE
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-Assets\Dennis\InputController.cs
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Activation\ActivationMixerPlayable.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Activation\ActivationPlayableAsset.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Activation\ActivationTrack.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Animation\AnimationOutputWeightProcessor.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Animation\AnimationPlayableAsset.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Animation\AnimationTrack.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Animation\ICurvesOwner.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\AssetUpgrade\AnimationPlayableAssetUpgrade.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\AssetUpgrade\AnimationTrackUpgrade.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\AssetUpgrade\ClipUpgrade.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\AssetUpgrade\TimelineUpgrade.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\AssetUpgrade\TrackUpgrade.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Attributes\TrackColorAttribute.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Audio\AudioClipProperties.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Audio\AudioMixerProperties.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Audio\AudioPlayableAsset.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Audio\AudioTrack.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\ClipCaps.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Control\ControlPlayableAsset.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Control\ControlTrack.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\DiscreteTime.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Evaluation\InfiniteRuntimeClip.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Evaluation\IntervalTree.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Evaluation\RuntimeClip.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Evaluation\RuntimeClipBase.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Evaluation\RuntimeElement.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Evaluation\ScheduleRuntimeClip.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Events\IMarker.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Events\INotificationOptionProvider.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Events\Marker.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Events\MarkerList.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Events\MarkerTrack.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Events\Signals\CustomSignalEventDrawer.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Events\Signals\SignalAsset.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Events\Signals\SignalEmitter.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Events\Signals\SignalReceiver.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Events\SignalTrack.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Extensions\TrackExtensions.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\GroupTrack.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Playables\ActivationControlPlayable.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Playables\BasicScriptPlayable.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Playables\DirectorControlPlayable.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Playables\ITimeControl.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Playables\NotificationFlags.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Playables\ParticleControlPlayable.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Playables\PrefabControlPlayable.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Playables\TimeControlPlayable.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Playables\TimeNotificationBehaviour.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Properties\AssemblyInfo.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Scripting\PlayableTrack.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Timeline.deprecated.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\TimelineAsset.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\TimelineAsset_CreateRemove.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\TimelineAttributes.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\TimelineClip.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\TimelinePlayable.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\TrackAsset.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Utilities\Extrapolation.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Utilities\HashUtility.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Utilities\IPropertyCollector.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Utilities\IPropertyPreview.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Utilities\NotificationUtilities.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Utilities\TimelineCreateUtilities.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Utilities\TimelineUndo.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Utilities\TimeUtility.cs"
+"D:\Game Engines\Unity\Hub\Editor\2019.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.timeline\Runtime\Utilities\WeightUtility.cs"

@@ -241,6 +241,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fbc17ebb589d0349a7f71a14e402151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputController: {fileID: 1338886891}
+  currentAngryMeter: 0
+  answerTimer: 5
+  choises:
+  - conversationStarter: {fileID: 0}
+    answers: []
+    increaseAngryMeter: 
+    reaction1: []
+    reaction2: []
+    reaction3: []
+    reaction4: []
+  - conversationStarter: {fileID: 0}
+    answers: []
+    increaseAngryMeter: 
+    reaction1: []
+    reaction2: []
+    reaction3: []
+    reaction4: []
 --- !u!82 &747536573
 AudioSource:
   m_ObjectHideFlags: 0
@@ -463,6 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001b5a26034a2aa409225de8eebda614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 747536572}
 --- !u!4 &1338886892
 Transform:
   m_ObjectHideFlags: 0
