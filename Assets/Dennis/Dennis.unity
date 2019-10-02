@@ -238,27 +238,63 @@ MonoBehaviour:
   m_GameObject: {fileID: 747536571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fbc17ebb589d0349a7f71a14e402151, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e9531371205f684ca091400cba713ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inputController: {fileID: 1338886891}
   currentAngryMeter: 0
+  conversationStarter: {fileID: 8300000, guid: 2fac6582dd5a85249913e3578a5603c7, type: 3}
   answerTimer: 5
   choises:
-  - conversationStarter: {fileID: 0}
-    answers: []
-    increaseAngryMeter: 
-    reaction1: []
-    reaction2: []
-    reaction3: []
-    reaction4: []
-  - conversationStarter: {fileID: 0}
-    answers: []
-    increaseAngryMeter: 
-    reaction1: []
-    reaction2: []
-    reaction3: []
-    reaction4: []
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a00000000000000f6fffffff6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    conversationNumber: 01000000020000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 968f42268a7733c4c98b6aaefab9c437, type: 3}
+    - {fileID: 8300000, guid: 13a64ac5b24af9d40a8fb7f9e2f917ae, type: 3}
+    - {fileID: 8300000, guid: d841a4caaf95d394f82ee8ef0b8dd4c0, type: 3}
+    - {fileID: 8300000, guid: 57fe496b2791b994783f6927acfe7acd, type: 3}
+    increaseAngryMeter: 0a000000f6ffffffecffffffecffffff
+    reaction:
+    - {fileID: 8300000, guid: 37ee72a2bc8c7944c86065593dd17453, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: 030fff61f43b9a24fa1c4bd73b0439f6, type: 3}
+    - {fileID: 8300000, guid: 030fff61f43b9a24fa1c4bd73b0439f6, type: 3}
+    conversationNumber: 04000000020000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 7196230de558cbc48a91e96d20222d7d, type: 3}
+    - {fileID: 8300000, guid: d27a7dfb25dd7d049a0da82d93314b96, type: 3}
+    - {fileID: 8300000, guid: 411ab69a075a14844ad8219bbb3676e4, type: 3}
+    - {fileID: 8300000, guid: e7c41f6efd912924c840962c3ad28ac8, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 1f8748513b2ce43428bf784859f71dea, type: 3}
+    - {fileID: 8300000, guid: fb04e5a797a1ce845944cb156c09cdcb, type: 3}
+    - {fileID: 8300000, guid: ed175c2a26324f74493658a79d92b820, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 5a8c6db8f89f945459e4583becead323, type: 3}
+    - {fileID: 8300000, guid: 9737a784d4b76594aa0afe9ce4830c8a, type: 3}
+    - {fileID: 8300000, guid: c60f730dd2531f849af16db9d814c716, type: 3}
+    - {fileID: 8300000, guid: 66ee97d0a560fd64a813997cb69dbdfb, type: 3}
+    increaseAngryMeter: 1400000000000000f6fffffff6ffffff
+    reaction:
+    - {fileID: 8300000, guid: dd94a33947696ce469d2144e27efb3ee, type: 3}
+    - {fileID: 8300000, guid: bbaa08ea141f5a346a58c58a9af3036b, type: 3}
+    - {fileID: 8300000, guid: 6969a46ae63712a48a7184235647c74e, type: 3}
+    - {fileID: 8300000, guid: 6969a46ae63712a48a7184235647c74e, type: 3}
+    conversationNumber: 05000000070000000800000008000000
+  answerTime: 0
 --- !u!82 &747536573
 AudioSource:
   m_ObjectHideFlags: 0
@@ -404,8 +440,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -10,68 +10,103 @@ public class AudioManager : MonoBehaviour
     [Range(-100, 100)]
     [SerializeField] private int currentAngryMeter;
 
+    [SerializeField] private AudioClip conversationStarter;
+
     [System.Serializable]
     public class Choises
     {
-        public AudioClip conversationStarter;
-
         public AudioClip[] answers;
         public int[] increaseAngryMeter;
 
-        public AudioClip[] reaction1;
-        public AudioClip[] reaction2;
-        public AudioClip[] reaction3;
-        public AudioClip[] reaction4;
+        public AudioClip[] reaction;
+        public int[] conversationNumber;
     }
 
     [SerializeField] private float answerTimer = 5f;
     private float maxAnswerTime;
 
     public Choises[] choises;
-
     private AudioSource source;
+    private Choises currentConversationNumber;
 
-    private Choises currentChoice;
-    private int choiceIndex = 0;
-
+    [HideInInspector] public bool answerTime = false;
     private bool hasAnswered = false;
-    private bool answerTime = false;
-    private bool answerIsPlaying = false;
     private int answerNumber;
-    private int answerButton;
 
-    private int reactionIndex;
-    
+    private bool hasReacted = false;
+
+    private ConversationState conversationState;
+
+    private enum ConversationState
+    {
+        QuestionState,
+        AnswerState,
+        ReactionState
+    }
 
     void Start()
     {
         source = GetComponent<AudioSource>();
         maxAnswerTime = answerTimer;
 
-        currentChoice = choises[choiceIndex];
-        source.clip = currentChoice.conversationStarter;
+        currentConversationNumber = choises[0];
+        source.clip = conversationStarter;
         source.Play();
     }
 
     void Update()
     {
-        CheckForNewChoise();
-
-        if(source.clip == currentChoice.conversationStarter && !source.isPlaying)
+        if(source.clip == conversationStarter && !source.isPlaying)
         {
-            answerTime = true;
+            conversationState = ConversationState.AnswerState;
         }
 
-        if (answerTime)
+        SwitchStates();
+    }
+
+    private void SwitchStates()
+    {
+        switch (conversationState)
         {
+            case ConversationState.AnswerState:
+                AnswerState();
+                break;
+            case ConversationState.ReactionState:
+                ReactionState();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void AnswerState()
+    {
+        if (!hasAnswered)
+        {
+            answerTime = true;
             answerTimer = Timer(answerTimer);
 
-            if(answerTimer < 0)
+            if (answerTimer < 0)
             {
                 answerTime = false;
+                hasAnswered = true;
+                answerNumber = Random.Range(0, 4);
+                currentAngryMeter += currentConversationNumber.increaseAngryMeter[answerNumber];
             }
 
-            LoadNextSentences();
+            return;
+        }
+
+        if (source.clip == currentConversationNumber.answers[answerNumber] && !source.isPlaying)
+        {
+            conversationState = ConversationState.ReactionState;
+        }
+
+        source.clip = currentConversationNumber.answers[answerNumber];
+
+        if (source.clip == currentConversationNumber.answers[answerNumber] && !source.isPlaying)
+        {
+            source.Play();
         }
     }
 
@@ -81,165 +116,28 @@ public class AudioManager : MonoBehaviour
         return timer;
     }
 
-    private void LoadNextSentences()
-    {
-        inputController.CheckInput();
-
-        if (!hasAnswered)
-        {
-            return;
-        }
-
-        if (!answerIsPlaying)
-        {
-            answerIsPlaying = true;
-            source.Play();
-        }
-
-        if (source.clip == currentChoice.answers[answerNumber] && !source.isPlaying)
-        {
-            if(answerNumber == 0)
-            {
-                Reaction1();
-            }
-            else if (answerNumber == 1)
-            {
-                Reaction2();
-            }
-            else if (answerNumber == 2)
-            {
-                Reaction3();
-            }
-            else if (answerNumber == 3)
-            {
-                Reaction4();
-            }
-        }
-    }
-    
     public void AnswerButton(int buttonPressed)
     {
-        source.clip = currentChoice.answers[buttonPressed];
         answerNumber = buttonPressed;
-        currentAngryMeter += currentChoice.increaseAngryMeter[buttonPressed];
+        currentAngryMeter += currentConversationNumber.increaseAngryMeter[answerNumber];
         hasAnswered = true;
     }
 
-    private void CheckForNewChoise()
+    private void ReactionState()
     {
-        if(source.clip == currentChoice.reaction1[reactionIndex] || source.clip == currentChoice.reaction2[reactionIndex] || 
-            source.clip == currentChoice.reaction3[reactionIndex] || source.clip == currentChoice.reaction4[reactionIndex] && 
-            !source.isPlaying)
+        if (!hasReacted)
+        {
+            hasReacted = true;
+            source.clip = currentConversationNumber.reaction[answerNumber];
+            source.Play();
+        }
+
+        if (!source.isPlaying)
         {
             answerTimer = maxAnswerTime;
-            hasAnswered = false;
-            answerIsPlaying = false;
-
-            choiceIndex++;
-            currentChoice = choises[choiceIndex];
-
-            source.clip = currentChoice.conversationStarter;
-            source.Play();
-        }
-    }
-
-    private void Reaction1()
-    {
-        if (currentAngryMeter < -30)
-        {
-            //Happy audio clip
-            reactionIndex = 0;
-            source.clip = currentChoice.reaction1[reactionIndex];
-            source.Play();
-        }
-        else if (currentAngryMeter > -30 && currentAngryMeter < 30)
-        {
-            //Neutral audio clip
-            reactionIndex = 1;
-            source.clip = currentChoice.reaction1[reactionIndex];
-            source.Play();
-        }
-        else
-        {
-            //Angry audio clip
-            reactionIndex = 2;
-            source.clip = currentChoice.reaction1[reactionIndex];
-            source.Play();
-        }
-    }
-
-    private void Reaction2()
-    {
-        if (currentAngryMeter < -30)
-        {
-            //Happy audio clip
-            reactionIndex = 0;
-            source.clip = currentChoice.reaction2[reactionIndex];
-            source.Play();
-        }
-        else if (currentAngryMeter > -30 && currentAngryMeter < 30)
-        {
-            //Neutral audio clip
-            reactionIndex = 1;
-            source.clip = currentChoice.reaction2[reactionIndex];
-            source.Play();
-        }
-        else
-        {
-            //Angry audio clip
-            reactionIndex = 2;
-            source.clip = currentChoice.reaction2[reactionIndex];
-            source.Play();
-        }
-    }
-
-    private void Reaction3()
-    {
-        if (currentAngryMeter < -30)
-        {
-            //Happy audio clip
-            reactionIndex = 0;
-            source.clip = currentChoice.reaction3[reactionIndex];
-            source.Play();
-        }
-        else if (currentAngryMeter > -30 && currentAngryMeter < 30)
-        {
-            //Neutral audio clip
-            reactionIndex = 1;
-            source.clip = currentChoice.reaction3[reactionIndex];
-            source.Play();
-        }
-        else
-        {
-            //Angry audio clip
-            reactionIndex = 2;
-            source.clip = currentChoice.reaction3[reactionIndex];
-            source.Play();
-        }
-    }
-
-    private void Reaction4()
-    {
-        if (currentAngryMeter < -30)
-        {
-            //Happy audio clip
-            reactionIndex = 0;
-            source.clip = currentChoice.reaction4[reactionIndex];
-            source.Play();
-        }
-        else if (currentAngryMeter > -30 && currentAngryMeter < 30)
-        {
-            //Neutral audio clip
-            reactionIndex = 1;
-            source.clip = currentChoice.reaction4[reactionIndex];
-            source.Play();
-        }
-        else
-        {
-            //Angry audio clip
-            reactionIndex = 2;
-            source.clip = currentChoice.reaction4[reactionIndex];
-            source.Play();
+            hasReacted = false;
+            currentConversationNumber = choises[currentConversationNumber.conversationNumber[answerNumber]];
+            conversationState = ConversationState.AnswerState;
         }
     }
 }

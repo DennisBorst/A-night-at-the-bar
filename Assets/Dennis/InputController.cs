@@ -40,25 +40,28 @@ public class InputController : MonoBehaviour
 
     public void CheckInput()
     {
-        if (Input.GetKeyDown(happyEmotion))
+        if (audioManager.answerTime)
         {
-            Debug.Log("I am happy");
-            audioManager.AnswerButton(0);
-        }
-        else if (Input.GetKeyDown(angryEmotion))
-        {
-            Debug.Log("I am angry");
-            audioManager.AnswerButton(1);
-        }
-        else if (Input.GetKeyDown(neutralEmotion))
-        {
-            Debug.Log("I am neutral");
-            audioManager.AnswerButton(2);
-        }
-        else if (Input.GetKeyDown(nervousEmotion))
-        {
-            Debug.Log("I am nervous");
-            audioManager.AnswerButton(3);
+            if (Input.GetKeyDown(happyEmotion))
+            {
+                Debug.Log("I am happy");
+                audioManager.AnswerButton(0);
+            }
+            else if (Input.GetKeyDown(angryEmotion))
+            {
+                Debug.Log("I am angry");
+                audioManager.AnswerButton(1);
+            }
+            else if (Input.GetKeyDown(neutralEmotion))
+            {
+                Debug.Log("I am neutral");
+                audioManager.AnswerButton(2);
+            }
+            else if (Input.GetKeyDown(nervousEmotion))
+            {
+                Debug.Log("I am nervous");
+                audioManager.AnswerButton(3);
+            }
         }
     }
 }
