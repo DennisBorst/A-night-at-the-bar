@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{428BB72A-6FD9-5F62-11B1-160C517DD781}</ProjectGuid>
+    <ProjectGuid>{91954EDE-B5D6-D7AA-B745-19D73AFD23B5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -67,31 +67,31 @@
     <Compile Include="Assets\Dennis\OldAudioManager.cs" />
     <Compile Include="Assets\Willem\Background.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the bar/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the barr/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the bar/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the barr/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the bar/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the barr/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the bar/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the barr/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the bar/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the barr/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the bar/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the barr/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the bar/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the barr/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the bar/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the barr/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the bar/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the barr/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Game Engines/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

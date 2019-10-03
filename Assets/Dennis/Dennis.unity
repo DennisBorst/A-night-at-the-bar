@@ -243,32 +243,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputController: {fileID: 1338886891}
   currentAngryMeter: 0
-  conversationStarter: {fileID: 8300000, guid: 2fac6582dd5a85249913e3578a5603c7, type: 3}
+  conversationStarter: {fileID: 8300000, guid: 3c3fe423c4f69e844bc4374950faac8f, type: 3}
   answerTimer: 5
   choises:
   - answers:
-    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
-    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
-    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
-    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    - {fileID: 8300000, guid: aab97d05803c2984caa65bebd23beb26, type: 3}
+    - {fileID: 8300000, guid: eb58c2a7f56621b4691a30fe34f240ac, type: 3}
+    - {fileID: 8300000, guid: dff54fc49041ea1439029640dfc762dd, type: 3}
+    - {fileID: 8300000, guid: e26e947ecaf341843aab5b5bab788112, type: 3}
     increaseAngryMeter: 0a00000000000000f6fffffff6ffffff
     reaction:
-    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
-    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
-    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
-    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: 5d1e7b749533a62489af327433134ff0, type: 3}
+    - {fileID: 8300000, guid: 8353e911bb924aa4eae94ff67f721a47, type: 3}
+    - {fileID: 8300000, guid: 624ed357421dc444c94c23a51007e27c, type: 3}
+    - {fileID: 8300000, guid: 624ed357421dc444c94c23a51007e27c, type: 3}
     conversationNumber: 01000000020000000300000003000000
   - answers:
-    - {fileID: 8300000, guid: 968f42268a7733c4c98b6aaefab9c437, type: 3}
-    - {fileID: 8300000, guid: 13a64ac5b24af9d40a8fb7f9e2f917ae, type: 3}
-    - {fileID: 8300000, guid: d841a4caaf95d394f82ee8ef0b8dd4c0, type: 3}
-    - {fileID: 8300000, guid: 57fe496b2791b994783f6927acfe7acd, type: 3}
+    - {fileID: 8300000, guid: 6c898349700e90b40bd6f84b4f356693, type: 3}
+    - {fileID: 8300000, guid: ca609de19d86e1045bf002399355e454, type: 3}
+    - {fileID: 8300000, guid: e39d330adc22aff4dbd04e493e0d2f78, type: 3}
+    - {fileID: 8300000, guid: 0a7115c918e64124eac7f28bf1bf419a, type: 3}
     increaseAngryMeter: 0a000000f6ffffffecffffffecffffff
     reaction:
     - {fileID: 8300000, guid: 37ee72a2bc8c7944c86065593dd17453, type: 3}
-    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
-    - {fileID: 8300000, guid: 030fff61f43b9a24fa1c4bd73b0439f6, type: 3}
-    - {fileID: 8300000, guid: 030fff61f43b9a24fa1c4bd73b0439f6, type: 3}
+    - {fileID: 8300000, guid: 8353e911bb924aa4eae94ff67f721a47, type: 3}
+    - {fileID: 8300000, guid: 8f97f18acb2f1e34b9d4ba51765e7940, type: 3}
+    - {fileID: 8300000, guid: 8f97f18acb2f1e34b9d4ba51765e7940, type: 3}
     conversationNumber: 04000000020000000300000003000000
   - answers:
     - {fileID: 8300000, guid: 7196230de558cbc48a91e96d20222d7d, type: 3}
