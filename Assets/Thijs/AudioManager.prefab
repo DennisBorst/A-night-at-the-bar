@@ -1,0 +1,328 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6758900857696173591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6758900857696173586}
+  - component: {fileID: 6758900857696173585}
+  - component: {fileID: 6758900857696173584}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6758900857696173586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758900857696173591}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &6758900857696173585
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758900857696173591}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &6758900857696173584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758900857696173591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9531371205f684ca091400cba713ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputController: {fileID: 0}
+  currentAngryMeter: 0
+  conversationStarter: {fileID: 8300000, guid: 3c3fe423c4f69e844bc4374950faac8f, type: 3}
+  answerTimer: 5
+  choises:
+  - answers:
+    - {fileID: 8300000, guid: aab97d05803c2984caa65bebd23beb26, type: 3}
+    - {fileID: 8300000, guid: eb58c2a7f56621b4691a30fe34f240ac, type: 3}
+    - {fileID: 8300000, guid: dff54fc49041ea1439029640dfc762dd, type: 3}
+    - {fileID: 8300000, guid: e26e947ecaf341843aab5b5bab788112, type: 3}
+    increaseAngryMeter: 0a00000000000000f6fffffff6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 5d1e7b749533a62489af327433134ff0, type: 3}
+    - {fileID: 8300000, guid: 8353e911bb924aa4eae94ff67f721a47, type: 3}
+    - {fileID: 8300000, guid: 624ed357421dc444c94c23a51007e27c, type: 3}
+    - {fileID: 8300000, guid: 624ed357421dc444c94c23a51007e27c, type: 3}
+    conversationNumber: 01000000020000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 6c898349700e90b40bd6f84b4f356693, type: 3}
+    - {fileID: 8300000, guid: ca609de19d86e1045bf002399355e454, type: 3}
+    - {fileID: 8300000, guid: e39d330adc22aff4dbd04e493e0d2f78, type: 3}
+    - {fileID: 8300000, guid: 0a7115c918e64124eac7f28bf1bf419a, type: 3}
+    increaseAngryMeter: 0a000000f6ffffffecffffffecffffff
+    reaction:
+    - {fileID: 8300000, guid: 2fac6582dd5a85249913e3578a5603c7, type: 3}
+    - {fileID: 8300000, guid: 8353e911bb924aa4eae94ff67f721a47, type: 3}
+    - {fileID: 8300000, guid: 8f97f18acb2f1e34b9d4ba51765e7940, type: 3}
+    - {fileID: 8300000, guid: 8f97f18acb2f1e34b9d4ba51765e7940, type: 3}
+    conversationNumber: 04000000020000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 968f42268a7733c4c98b6aaefab9c437, type: 3}
+    - {fileID: 8300000, guid: 13a64ac5b24af9d40a8fb7f9e2f917ae, type: 3}
+    - {fileID: 8300000, guid: d841a4caaf95d394f82ee8ef0b8dd4c0, type: 3}
+    - {fileID: 8300000, guid: 57fe496b2791b994783f6927acfe7acd, type: 3}
+    increaseAngryMeter: 1400000000000000f6fffffff6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 37ee72a2bc8c7944c86065593dd17453, type: 3}
+    - {fileID: 8300000, guid: bbaa08ea141f5a346a58c58a9af3036b, type: 3}
+    - {fileID: 8300000, guid: 030fff61f43b9a24fa1c4bd73b0439f6, type: 3}
+    - {fileID: 8300000, guid: 030fff61f43b9a24fa1c4bd73b0439f6, type: 3}
+    conversationNumber: 05000000070000000800000008000000
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  - answers:
+    - {fileID: 8300000, guid: 372b70b6553276042a947fcc8b41c135, type: 3}
+    - {fileID: 8300000, guid: ca11dd57fcd5ed647a81fb4e8574dafd, type: 3}
+    - {fileID: 8300000, guid: 9fcc66e20edd4044787079a6addd2a5b, type: 3}
+    - {fileID: 8300000, guid: 06d50ed589ae5a44a998c68bbf63a3d5, type: 3}
+    increaseAngryMeter: 0a000000f6ffffff00000000f6ffffff
+    reaction:
+    - {fileID: 8300000, guid: 0864d153f1ce25a4a80f06dd235f314e, type: 3}
+    - {fileID: 8300000, guid: 216bbf90c8408de499f4da76fb12b216, type: 3}
+    - {fileID: 8300000, guid: fae52c0620fe13949a760a61164ed2c0, type: 3}
+    - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
+    conversationNumber: 05000000060000000300000003000000
+  answerTime: 0
