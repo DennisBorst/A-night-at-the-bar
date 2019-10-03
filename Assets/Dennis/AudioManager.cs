@@ -135,6 +135,7 @@ public class AudioManager : MonoBehaviour
         if (!source.isPlaying)
         {
             answerTimer = maxAnswerTime;
+            hasAnswered = false;
             hasReacted = false;
             currentConversationNumber = choises[currentConversationNumber.conversationNumber[answerNumber]];
             conversationState = ConversationState.AnswerState;

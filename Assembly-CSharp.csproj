@@ -65,6 +65,7 @@
     <Compile Include="Assets\Dennis\AudioManager.cs" />
     <Compile Include="Assets\Dennis\InputController.cs" />
     <Compile Include="Assets\Dennis\OldAudioManager.cs" />
+    <Compile Include="Assets\Willem\Background.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the bar/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
