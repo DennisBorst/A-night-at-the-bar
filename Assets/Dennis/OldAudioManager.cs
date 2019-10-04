@@ -88,7 +88,7 @@ public class OldAudioManager : MonoBehaviour
 
     private void LoadNextSentences()
     {
-        inputController.CheckInput();
+        inputController.CheckInputAudioConversation();
 
         if (!hasAnswered)
         {

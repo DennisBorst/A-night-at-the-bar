@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputController : MonoBehaviour
 {
     [SerializeField] private AudioManager audioManager;
+    [SerializeField] private TutorialManager tutorialManager;
 
     private KeyCode happyEmotion;
     private KeyCode angryEmotion;
@@ -18,7 +19,14 @@ public class InputController : MonoBehaviour
 
     void Update()
     {
-        CheckInput();
+        if (tutorialManager.tutorialIsPlaying)
+        {
+            CheckInputAudioTutorial();
+        }
+        else
+        {
+            CheckInputAudioConversation();
+        }
     }
 
     private void ConfigureControlButtons()
@@ -27,7 +35,6 @@ public class InputController : MonoBehaviour
 
         //A button of 1 op toetsenbord
         angryEmotion = KeyCode.Joystick1Button0;
-
 
         //B button of 2 op toetsenbord
         sadEmotion = KeyCode.Joystick1Button1;
@@ -39,7 +46,31 @@ public class InputController : MonoBehaviour
         loveEmotion = KeyCode.Joystick1Button3;
     }
 
-    public void CheckInput()
+    public void CheckInputAudioTutorial()
+    {
+        if (Input.GetKeyDown(angryEmotion) || Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Debug.Log("pressed Angry button");
+            tutorialManager.InputController(0);
+        }
+        else if (Input.GetKeyDown(sadEmotion) || Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Debug.Log("pressed Sad button");
+            tutorialManager.InputController(1);
+        }
+        else if (Input.GetKeyDown(happyEmotion) || Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Debug.Log("pressed Happy button");
+            tutorialManager.InputController(2);
+        }
+        else if (Input.GetKeyDown(loveEmotion) || Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            Debug.Log("pressed Love button");
+            tutorialManager.InputController(3);
+        }
+    }
+
+    public void CheckInputAudioConversation()
     {
         if (audioManager.answerTime)
         {

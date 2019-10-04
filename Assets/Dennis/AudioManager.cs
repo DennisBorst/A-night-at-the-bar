@@ -24,23 +24,26 @@ public class AudioManager : MonoBehaviour
         public bool[] conversationEnded;
     }
 
-    [SerializeField] private float answerTimer = 5f;
-    private float maxAnswerTime;
-
+    //Overall important stuff
     public Choises[] choises;
     private AudioSource source;
     private Choises currentConversationNumber;
+    private ConversationState conversationState;
 
+    //Everything about answering
+    [SerializeField] private float answerTimer = 5f;
+    private float maxAnswerTime;
     [HideInInspector] public bool answerTime = false;
     private bool hasAnswered = false;
     private int answerNumber;
 
+    //Everything about reactions
     private bool hasReacted = false;
-    private float endFadeTime = 1f;
+
+    //Everything about the ending
     [Range(0, 0.01f)]
     [SerializeField] private float fadeSpeed;
-
-    private ConversationState conversationState;
+    private float endFadeTime = 1f;
 
     private enum ConversationState
     {
@@ -125,9 +128,9 @@ public class AudioManager : MonoBehaviour
         return timer;
     }
 
-    public void AnswerButton(int buttonPressed)
+    public void AnswerButton(int _buttonPressed)
     {
-        answerNumber = buttonPressed;
+        answerNumber = _buttonPressed;
         hasAnswered = true;
         answerTime = false;
     }
@@ -140,7 +143,6 @@ public class AudioManager : MonoBehaviour
             hasReacted = true;
             source.clip = currentConversationNumber.reaction[answerNumber];
             source.Play();
-
             if (currentConversationNumber.conversationEnded[answerNumber] == true)
             {
                 conversationState = ConversationState.EndState;
