@@ -6,7 +6,7 @@ public class Background : MonoBehaviour
 {
 
     [SerializeField] private AudioClip[] BackgroundSounds;
-    [SerializeField] private float maxVolume;
+    [SerializeField] private float FadeStepTime = .01f;
 
     private AudioSource[] sources;
     private int CurrentSound = -1;
@@ -21,16 +21,46 @@ public class Background : MonoBehaviour
     {
         if (BGIndex != CurrentSound)
         {
-            sources[otherSource(CurrentSource)].clip = BackgroundSounds[BGIndex];
-            sources[CurrentSource].volume = 0;
-            sources[otherSource(CurrentSource)].volume = maxVolume;
-            CurrentSource = otherSource(CurrentSource);
+            sources[otherSource()].clip = BackgroundSounds[BGIndex];
+            sources[otherSource()].Play();
+
+            CurrentSource = otherSource();
         }
     }
 
-    private int otherSource(int i)
+    private void FixedUpdate()
     {
-        if (i == 0) { return 1; }
+        if (CurrentSource == 0)
+        {
+            sources[CurrentSource].volume += .01f;
+            sources[otherSource()].volume -= .01f;
+        }
+        else if (CurrentSource == 1)
+        {
+            sources[CurrentSource].volume += .01f;
+            sources[otherSource()].volume -= .01f;
+        }
+    }
+
+    private int otherSource()
+    {
+        if (CurrentSource == 0) { return 1; }
         else return 0;
     }
+
+    //private void Update() //debug controls
+    //{
+    //    if (Input.GetKeyDown(KeyCode.A))
+    //    {
+    //        playBackgroundSound(0);
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.S))
+    //    {
+    //        playBackgroundSound(1);
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.D))
+    //    {
+    //        playBackgroundSound(2);
+    //    }
+    //}
 }
