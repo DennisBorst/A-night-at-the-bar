@@ -258,6 +258,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 624ed357421dc444c94c23a51007e27c, type: 3}
     - {fileID: 8300000, guid: 624ed357421dc444c94c23a51007e27c, type: 3}
     conversationNumber: 01000000020000000300000003000000
+    conversationEnded: 01000000
   - answers:
     - {fileID: 8300000, guid: 6c898349700e90b40bd6f84b4f356693, type: 3}
     - {fileID: 8300000, guid: ca609de19d86e1045bf002399355e454, type: 3}
@@ -270,6 +271,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 8f97f18acb2f1e34b9d4ba51765e7940, type: 3}
     - {fileID: 8300000, guid: 8f97f18acb2f1e34b9d4ba51765e7940, type: 3}
     conversationNumber: 04000000020000000300000003000000
+    conversationEnded: 00000000
   - answers:
     - {fileID: 8300000, guid: 7196230de558cbc48a91e96d20222d7d, type: 3}
     - {fileID: 8300000, guid: d27a7dfb25dd7d049a0da82d93314b96, type: 3}
@@ -282,6 +284,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: ed175c2a26324f74493658a79d92b820, type: 3}
     - {fileID: 8300000, guid: a1b367a4ee44111439be15fd3fc7a0f2, type: 3}
     conversationNumber: 05000000060000000300000003000000
+    conversationEnded: 
   - answers:
     - {fileID: 8300000, guid: 5a8c6db8f89f945459e4583becead323, type: 3}
     - {fileID: 8300000, guid: 9737a784d4b76594aa0afe9ce4830c8a, type: 3}
@@ -294,7 +297,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 6969a46ae63712a48a7184235647c74e, type: 3}
     - {fileID: 8300000, guid: 6969a46ae63712a48a7184235647c74e, type: 3}
     conversationNumber: 05000000070000000800000008000000
+    conversationEnded: 
   answerTime: 0
+  fadeSpeed: 0.001
 --- !u!82 &747536573
 AudioSource:
   m_ObjectHideFlags: 0

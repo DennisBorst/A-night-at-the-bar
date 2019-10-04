@@ -20,6 +20,8 @@ public class AudioManager : MonoBehaviour
 
         public AudioClip[] reaction;
         public int[] conversationNumber;
+
+        public bool[] conversationEnded;
     }
 
     [SerializeField] private float answerTimer = 5f;
@@ -34,6 +36,9 @@ public class AudioManager : MonoBehaviour
     private int answerNumber;
 
     private bool hasReacted = false;
+    private float endFadeTime = 1f;
+    [Range(0, 0.01f)]
+    [SerializeField] private float fadeSpeed;
 
     private ConversationState conversationState;
 
@@ -41,7 +46,8 @@ public class AudioManager : MonoBehaviour
     {
         QuestionState,
         AnswerState,
-        ReactionState
+        ReactionState,
+        EndState
     }
 
     void Start()
@@ -74,6 +80,9 @@ public class AudioManager : MonoBehaviour
             case ConversationState.ReactionState:
                 ReactionState();
                 break;
+            case ConversationState.EndState:
+                GameHasEnded();
+                break;
             default:
                 break;
         }
@@ -91,7 +100,6 @@ public class AudioManager : MonoBehaviour
                 answerTime = false;
                 hasAnswered = true;
                 answerNumber = Random.Range(0, 4);
-                currentAngryMeter += currentConversationNumber.increaseAngryMeter[answerNumber];
             }
 
             return;
@@ -107,6 +115,7 @@ public class AudioManager : MonoBehaviour
         if (source.clip == currentConversationNumber.answers[answerNumber] && !source.isPlaying)
         {
             source.Play();
+            currentAngryMeter += currentConversationNumber.increaseAngryMeter[answerNumber];
         }
     }
 
@@ -119,17 +128,23 @@ public class AudioManager : MonoBehaviour
     public void AnswerButton(int buttonPressed)
     {
         answerNumber = buttonPressed;
-        currentAngryMeter += currentConversationNumber.increaseAngryMeter[answerNumber];
         hasAnswered = true;
+        answerTime = false;
     }
 
     private void ReactionState()
     {
+        
         if (!hasReacted)
         {
             hasReacted = true;
             source.clip = currentConversationNumber.reaction[answerNumber];
             source.Play();
+
+            if (currentConversationNumber.conversationEnded[answerNumber] == true)
+            {
+                conversationState = ConversationState.EndState;
+            }
         }
 
         if (!source.isPlaying)
@@ -139,6 +154,17 @@ public class AudioManager : MonoBehaviour
             hasReacted = false;
             currentConversationNumber = choises[currentConversationNumber.conversationNumber[answerNumber]];
             conversationState = ConversationState.AnswerState;
+        }
+    }
+
+    private void GameHasEnded()
+    {
+        Debug.Log("game has ended");
+        endFadeTime -= fadeSpeed; 
+        source.volume = endFadeTime;
+        if(endFadeTime <= 0)
+        {
+            endFadeTime = 0;
         }
     }
 }
