@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private int currentAngryMeter;
 
     [SerializeField] private AudioClip conversationStarter;
+    [SerializeField] private AudioClip countDownSound;
 
     [System.Serializable]
     public class Choises
@@ -97,6 +98,12 @@ public class AudioManager : MonoBehaviour
         {
             answerTime = true;
             answerTimer = Timer(answerTimer);
+
+            if (!source.isPlaying)
+            {
+                source.clip = countDownSound;
+                source.Play();
+            }
 
             if (answerTimer < 0)
             {

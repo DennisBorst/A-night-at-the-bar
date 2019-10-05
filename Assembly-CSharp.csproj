@@ -67,6 +67,8 @@
     <Compile Include="Assets\Dennis\OldAudioManager.cs" />
     <Compile Include="Assets\Dennis\TutorialManager.cs" />
     <Compile Include="Assets\Willem\Background.cs" />
+    <Compile Include="Assets\Willem\RandomSounds.cs" />
+    <None Include="Assets\Willem\Sounds(unedited)\Sounds(dl links).txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/HKU bestanden/Jaar 2/Sound, games &amp; interaction/A night at the bar/A night at the barr/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

@@ -244,6 +244,7 @@ MonoBehaviour:
   inputController: {fileID: 1338886891}
   currentAngryMeter: 0
   conversationStarter: {fileID: 8300000, guid: 3c3fe423c4f69e844bc4374950faac8f, type: 3}
+  countDownSound: {fileID: 8300000, guid: e80755c3edaed324990f4631bb461966, type: 3}
   choises:
   - answers:
     - {fileID: 8300000, guid: aab97d05803c2984caa65bebd23beb26, type: 3}
@@ -297,7 +298,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 6969a46ae63712a48a7184235647c74e, type: 3}
     conversationNumber: 05000000070000000800000008000000
     conversationEnded: 00000000
-  answerTimer: 5
+  answerTimer: 10
   answerTime: 0
   fadeSpeed: 0.001
 --- !u!82 &747536573
