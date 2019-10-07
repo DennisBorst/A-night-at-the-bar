@@ -48,19 +48,19 @@ public class Background : MonoBehaviour
         else return 0;
     }
 
-    //private void Update() //debug controls
-    //{
-    //    if (Input.GetKeyDown(KeyCode.A))
-    //    {
-    //        playBackgroundSound(0);
-    //    }
-    //    if (Input.GetKeyDown(KeyCode.S))
-    //    {
-    //        playBackgroundSound(1);
-    //    }
-    //    if (Input.GetKeyDown(KeyCode.D))
-    //    {
-    //        playBackgroundSound(2);
-    //    }
-    //}
+    private void Update() //debug controls
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            playBackgroundSound(0);
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            playBackgroundSound(1);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            playBackgroundSound(2);
+        }
+    }
 }
