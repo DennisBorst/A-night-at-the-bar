@@ -1,23 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] private InputController inputController;
 
     //The higher the number the angrier your mate is, the lower the number the happier your mate is
-    [Range(-100, 100)]
-    [SerializeField] private int currentAngryMeter;
+    //[Range(-100, 100)]
+    //[SerializeField] private int currentAngryMeter;
 
     [SerializeField] private AudioClip conversationStarter;
+    [SerializeField] private AudioClip conversationOutro;
+    [SerializeField] private AudioClip conversationRestart;
     [SerializeField] private AudioClip countDownSound;
 
     [System.Serializable]
     public class Choises
     {
         public AudioClip[] answers;
-        public int[] increaseAngryMeter;
+        //public int[] increaseAngryMeter;
 
         public AudioClip[] reaction;
         public int[] conversationNumber;
@@ -45,16 +48,23 @@ public class AudioManager : MonoBehaviour
     [Range(0, 0.01f)]
     [SerializeField] private float fadeSpeed;
     private float endFadeTime = 1f;
+    private bool hasEnded = false;
+
+    [Space]
+    //other soundsSources
+    [SerializeField] private AudioSource sourceBackground;
+    [SerializeField] private AudioSource sourceRandomSounds;
 
     private enum ConversationState
     {
         QuestionState,
         AnswerState,
         ReactionState,
-        EndState
+        EndState,
+        Outro
     }
 
-    void Start()
+    private void Awake()
     {
         source = GetComponent<AudioSource>();
         maxAnswerTime = answerTimer;
@@ -86,6 +96,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case ConversationState.EndState:
                 GameHasEnded();
+                break;
+            case ConversationState.Outro:
+                Outro();
                 break;
             default:
                 break;
@@ -125,7 +138,7 @@ public class AudioManager : MonoBehaviour
         if (source.clip == currentConversationNumber.answers[answerNumber] && !source.isPlaying)
         {
             source.Play();
-            currentAngryMeter += currentConversationNumber.increaseAngryMeter[answerNumber];
+            //currentAngryMeter += currentConversationNumber.increaseAngryMeter[answerNumber];
         }
     }
 
@@ -144,7 +157,6 @@ public class AudioManager : MonoBehaviour
 
     private void ReactionState()
     {
-        
         if (!hasReacted)
         {
             hasReacted = true;
@@ -168,12 +180,42 @@ public class AudioManager : MonoBehaviour
 
     private void GameHasEnded()
     {
-        Debug.Log("game has ended");
-        endFadeTime -= fadeSpeed; 
-        source.volume = endFadeTime;
-        if(endFadeTime <= 0)
+        if(!source.isPlaying)
         {
-            endFadeTime = 0;
+            Debug.Log("game has ended");
+            endFadeTime -= fadeSpeed;
+            sourceBackground.volume = endFadeTime;
+            sourceRandomSounds.volume = endFadeTime;
+
+            if (endFadeTime <= 0)
+            {
+                endFadeTime = 0;
+                conversationState = ConversationState.Outro;
+            }
+        }
+    }
+
+    private void Outro()
+    {
+        if (source.clip == conversationOutro && !source.isPlaying)
+        {
+            source.clip = conversationRestart;
+            source.Play();
+        }
+        if(!source.isPlaying && source.clip == conversationRestart)
+        {
+            answerTime = true;
+            if(answerNumber == 1)
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
+
+        if (!hasEnded && !source.isPlaying)
+        {
+            hasEnded = true;
+            source.clip = conversationOutro;
+            source.Play();
         }
     }
 }

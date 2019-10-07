@@ -8,6 +8,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject audioManagerObject;
 
     [Space] //Audio stuff
+    [SerializeField] private AudioClip introGame;
     [SerializeField] private AudioClip tutorialStarter;
     [SerializeField] private AudioClip tutorialEnd;
 
@@ -20,21 +21,31 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private AudioClip[] happyClip;
 
     private int buttonPressed;
-    private int tutorialStatus = -1;
+    private int tutorialStatus;
     private bool allowToPressButton;
     private bool explanationIsPlaying;
-    private bool endTutorialIsPlaying = false;
+    private bool tutorialStarted;
+    private bool introGameIsPlaying;
+    private bool endTutorialIsPlaying;
+
 
     private AudioSource source;
 
-    private void Start()
+    private void Awake()
     {
         source = GetComponent<AudioSource>();
 
+        buttonPressed = -1;
+
         audioManagerObject.SetActive(false);
+        tutorialStatus = -1;
         tutorialIsPlaying = true;
 
-        source.clip = tutorialStarter;
+        tutorialStarted = false;
+        introGameIsPlaying = true;
+        endTutorialIsPlaying = false;
+
+        source.clip = introGame;
         source.Play();
     }
 
@@ -42,7 +53,10 @@ public class TutorialManager : MonoBehaviour
     {
         if (endTutorialIsPlaying)
         {
-            TutorialEnding();
+            if (source.clip == tutorialEnd && !source.isPlaying)
+            {
+                TutorialEnding();
+            }
             return;
         }
         else
@@ -60,18 +74,28 @@ public class TutorialManager : MonoBehaviour
 
     public void InputController(int _buttonPressed)
     {
-        buttonPressed = _buttonPressed;
 
         if (allowToPressButton)
         {
+            buttonPressed = _buttonPressed;
             allowToPressButton = false;
-            TutorialStatus();
+            if (tutorialStarted)
+            {
+                TutorialStatus();
+            }
         }
     }
 
     private void PlayInputExplanation(int _tutorialStatus)
     {
         source.clip = allInputNarratorSentences[_tutorialStatus];
+        source.Play();
+    }
+
+    private void StartTutorial()
+    {
+        tutorialStarted = true;
+        source.clip = tutorialStarter;
         source.Play();
     }
 
@@ -141,7 +165,28 @@ public class TutorialManager : MonoBehaviour
 
     private void CheckForNewSentences()
     {
-        if (source.clip == tutorialStarter && !source.isPlaying)
+
+        if (introGameIsPlaying)
+        {
+            if(buttonPressed == 2)
+            {
+                introGameIsPlaying = false;
+                StartTutorial();
+            }
+            else if(buttonPressed == 1)
+            {
+                introGameIsPlaying = false;
+                TutorialEnding();
+            }
+
+            if (!source.isPlaying)
+            {
+                allowToPressButton = true;
+            }
+            return;
+        }
+
+        if (source.clip == tutorialStarter && !source.isPlaying && tutorialStarted)
         {
             tutorialStatus = 0;
             explanationIsPlaying = false;
@@ -205,11 +250,8 @@ public class TutorialManager : MonoBehaviour
     {
         Debug.Log("Playing the end part");
         
-        if(source.clip == tutorialEnd && !source.isPlaying)
-        {
-            audioManagerObject.SetActive(true);
-            tutorialIsPlaying = false;
-            this.enabled = false;
-        }
+        audioManagerObject.SetActive(true);
+        tutorialIsPlaying = false;
+        this.enabled = false;
     }
 }
